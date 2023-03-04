@@ -65,3 +65,36 @@ var foo: undefined = undefined;
 // 型推論
 var unknown = 'string';
 unknown = 10;
+
+// let
+let hoo = 'hoo';
+let date = new Date();
+
+if (true) {
+  let hoo = 'hoo';
+}
+console.log(hoo);
+
+// {
+//   let hoo1 = 'hoo1';
+// }
+
+for (var i = 0; i < 5; i++) {
+  console.log(i);
+}
+console.log(i);
+
+for (let j = 0; j < 5; j++) {
+  console.log(j);
+}
+// console.log(j); // 参照できない
+
+var hoge = 'hoge';
+
+function logHoge() {
+  console.log(hoge); // undefined
+  let hoge = 'new hoge!';
+  console.log(hoge); // new hoge!
+}
+
+logHoge();
