@@ -104,3 +104,12 @@ const currentYear: number = 2020;
 currentYear = 2021;
 
 const PI = Math.PI;
+
+// テンプレート文字列 (Template Literals)
+let template1 = `This is Template strings.`;
+let name = 'tk';
+let template2 = `
+  Hello, TypeScript tutorial.
+  Thank you. ${name}
+`;
+console.log(template2);
