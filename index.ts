@@ -51,3 +51,17 @@ enum Character {
 }
 
 console.log(Character.Bob);
+
+// any型 どの型も使える
+var something: any = 'foo';
+something = 100;
+something = true;
+something = { id: 1 };
+
+// null, undefined型
+var el: Element | null = document.querySelector('#app');
+var foo: undefined = undefined;
+
+// 型推論
+var unknown = 'string';
+unknown = 10;
