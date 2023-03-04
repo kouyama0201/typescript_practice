@@ -20,3 +20,34 @@ var object: { [key: string]: string } = {
   id: 'test',
 };
 var post: object = [{ id: 12, content: 'lorem ipsum' }];
+
+// 共用型(Union型)
+var sample: string | number | boolean;
+sample = 'tk';
+sample = 100;
+sample = true;
+
+// enum型
+enum KeyCode {
+  Backspace = 8,
+  Tab = 9,
+  Enter = 13,
+}
+
+console.log(KeyCode.Backspace); // = 8
+
+enum ErrorCode {
+  OK = 200,
+  BAD_RESPONSE = 400,
+  UNAUTHORIZED = 401,
+}
+
+console.log(ErrorCode.OK);
+
+enum Character {
+  Bob, // 0
+  Dad, // 1
+  Mom, // 2
+}
+
+console.log(Character.Bob);
