@@ -239,7 +239,7 @@ class Animal {
   private _legs = 1;
 
   constructor(public isCry: boolean) {
-    this.isCry = isCry;
+    this.age = 2;
   }
 
   cry(): void {
@@ -269,3 +269,19 @@ let dog = new Animal(true);
 dog.cry();
 dog.legs = 4;
 console.log(dog.legs);
+
+// クラスの継承
+class Dog extends Animal {
+  constructor(public isCry: boolean) {
+    super(isCry);
+    this.age = 10;
+  }
+
+  cry(): void {
+    if (this.isCry) {
+      alert('Bow, wow'!);
+    }
+    console.log('dog is cry!');
+    super.cry();
+  }
+}
