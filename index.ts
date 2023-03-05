@@ -248,5 +248,5 @@ class Animal {
   }
 }
 
-let dof = new Animal(true);
-DocumentFragment.cry();
+let dog = new Animal(true);
+dog.cry();
