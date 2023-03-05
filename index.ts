@@ -236,6 +236,7 @@ const インスタンス = new クラス名(); // インスタンス化
 
 class Animal {
   age: number = 10;
+  private _legs = 1;
 
   constructor(public isCry: boolean) {
     this.isCry = isCry;
@@ -246,7 +247,25 @@ class Animal {
       alert(`age: ${this.age}`);
     }
   }
+
+  // アクセサメソッド(getter, setter)
+  get legs() {
+    return 4;
+  }
+
+  set legs(value: number) {
+    if (value > 1) {
+      this._legs = value;
+    }
+  }
+
+  // get email() {
+  //   return this.formGroup.get('email');
+  // }
+  // dog.email
 }
 
 let dog = new Animal(true);
 dog.cry();
+dog.legs = 4;
+console.log(dog.legs);
