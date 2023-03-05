@@ -285,3 +285,39 @@ class Dog extends Animal {
     super.cry();
   }
 }
+
+// インターフェイス (Interface)
+interface Animal {
+  name: string;
+  legs: number;
+  isCry: boolean;
+  cry(): void;
+}
+
+interface SuperAnimal extends Animal {
+  canRun: boolean;
+}
+
+let Dog: Animal = {
+  name: 'Maru',
+  legs: 4,
+  isCry: true,
+  cry: function () {
+    console.log('Bow wow!');
+  }
+}
+
+class Dog implements Animal {
+  name: string = 'Maru';
+  legs: number = 4;
+  isCry: boolean = true;
+  canRun: boolean = true;
+  cry(): void {
+    if (this.isCry) {
+      console.log('Bow, wow!');
+    }
+  }
+}
+
+let maru = new Dog();
+maru.cry();
