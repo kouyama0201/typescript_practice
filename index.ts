@@ -189,3 +189,29 @@ function sum(...values: number[]): number {
   });
 }
 console.log(sum(1, 3, 5, 9));
+
+// アロー関数
+// () => {}
+
+let add = (x1: number, x2: number): number => {
+  return x1 + x2;
+};
+console.log(add(1, 3));
+
+let hello = name => `Hello, ${name}!`;
+;
+console.log(hello('tk'));
+
+let getValue = (): number => {
+  return document.getElementById('app').getElementsByTagName('div').firstChild.getAttribute('value')
+  .toFixed(2),
+}
+
+document.getElementById('button1')?.addEventListener('click', function() {
+  console.log(this); // <button></button>
+});
+
+// this => window
+document.getElementById('button1')?.addEventListener('click', () => {
+  console.log(this); // Window
+});
