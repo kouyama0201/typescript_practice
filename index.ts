@@ -233,3 +233,20 @@ class クラス名 {
 const インスタンス = new クラス名(); // インスタンス化
 インスタンス.プロパティ = 'プロパティ2';
 インスタンス.メソッド1();
+
+class Animal {
+  age: number = 10;
+
+  constructor(public isCry: boolean) {
+    this.isCry = isCry;
+  }
+
+  cry(): void {
+    if (this.isCry) {
+      alert(`age: ${this.age}`);
+    }
+  }
+}
+
+let dof = new Animal(true);
+DocumentFragment.cry();
