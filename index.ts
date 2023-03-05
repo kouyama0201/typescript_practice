@@ -151,3 +151,27 @@ console.log(mergeObj);
 
 let test = { ...categories };
 console.log(test);
+
+// 分割代入
+let categories = ['post', 'news', 'info', 'other'];
+
+// let a = categories[0];
+// let b = categories[1];
+// let [a, b, , d] = categories;
+// let [a, b, ...rest] = categories;
+// console.log(a, b, rest);
+
+let [a = 10, b = 7] = [1];
+console.log(a, b);
+
+let post = { id: 1, content: 'dummy', created: '2020-04-01' };
+
+const { id, content:body } = post;
+console.log(id, body);
+
+const { id, name } = user.accountInfo.data;
+// user.accountInfo.data.id
+
+function test({ a, b, c }) {
+
+}
