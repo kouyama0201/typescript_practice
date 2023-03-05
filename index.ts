@@ -215,3 +215,21 @@ document.getElementById('button1')?.addEventListener('click', function() {
 document.getElementById('button1')?.addEventListener('click', () => {
   console.log(this); // Window
 });
+
+// クラス
+class クラス名 {
+  プロパティ = 'プロパティ1';
+
+  constructor() {
+    // 初期化関数
+    this.プロパティ = 'プロパティ';
+  }
+
+  メソッド1() {
+    console.log('テスト');
+    this.プロパティ = 'プロパティ3';
+  }
+}
+const インスタンス = new クラス名(); // インスタンス化
+インスタンス.プロパティ = 'プロパティ2';
+インスタンス.メソッド1();
